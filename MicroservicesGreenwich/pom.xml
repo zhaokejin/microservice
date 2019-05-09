@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.example</groupId>
+	<artifactId>MicroservicesGreenwich</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+
+	<modules>
+		<module>microservice-consumer</module>
+		<module>microservice-consumer-ribbon</module>
+		<module>microservice-provider</module>
+		<module>microservice-provider-sleuth-zipkin</module>
+		<module>microservice-consumer-feign</module>
+		<module>springboot-admin</module>
+		<module>microservice-provider-user</module>
+		<module>microservice-gateway-zuul</module>
+		<module>microservice-provider-mybatis-plus</module>
+		<module>microservice-simple-consumer-movie</module>
+		<module>microservice-simple-provider-user</module>
+		<module>microservice-consumer-ribbon-with-hystrix</module>
+		<module>microservice-consumer-feign-with-hystrix</module>
+		<module>microservice-consumer-movie-feign-hystrix-fallback-factory</module>
+		<module>microservice-consumer-movie-feign-hystrix-stream</module>
+		<module>microservice-hystrix-dashboard</module>
+		<module>microservice-hystrix-turbine</module>
+		<module>rocketmq-consume-demo</module>
+		<module>rocketmq-producer-demo</module>
+		<module>microservice-discovery-eureka</module>
+
+
+
+
+	</modules>
+</project>
