@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.example.entity.User;
 
 /**
- * @author zhouli
+ * @author zhaokj
  */
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {

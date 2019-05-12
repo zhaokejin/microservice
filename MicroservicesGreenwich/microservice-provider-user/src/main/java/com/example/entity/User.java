@@ -8,7 +8,7 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 
 /**
- * @author zhouli
+ * @author zhaokj
  */
 @Entity
 @Data
