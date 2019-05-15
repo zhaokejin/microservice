@@ -8,10 +8,11 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableFeignClients
 @SpringBootApplication
 @EnableCircuitBreaker
-public class MicroserviceConsumerMovieFeignHystrixStreamApplication {
+public class Mcmfhs {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MicroserviceConsumerMovieFeignHystrixStreamApplication.class, args);
+		SpringApplication.run(Mcmfhs.class, args);
 	}
 
 }
+
