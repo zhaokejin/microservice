@@ -15,6 +15,7 @@
 		<module>microservice-provider-sleuth-zipkin</module>
 		<module>microservice-consumer-feign</module>
 		<module>springboot-admin</module>
+		<module>springboot-apollo</module>
 		<module>microservice-provider-user</module>
 		<module>microservice-gateway-zuul</module>
 		<module>microservice-provider-mybatis-plus</module>
@@ -29,6 +30,8 @@
 		<module>rocketmq-consume-demo</module>
 		<module>rocketmq-producer-demo</module>
 		<module>microservice-discovery-eureka</module>
+		<module>microservice-flowable</module>
+		<module>microservice-flowable-feign</module>
 
 
 
