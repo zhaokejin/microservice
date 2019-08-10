@@ -33,6 +33,10 @@
 		<module>microservice-flowable</module>
 		<module>microservice-flowable-feign</module>
 
+		<module>microservice-logback</module>
+		<module>microservice-mybatis-plus-multiple-data-sources</module>
+
+
 
 
 
