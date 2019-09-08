@@ -1,4 +1,4 @@
-*.yml linguist-language=java
+  
+//*后面的语言就是你Github错识别的语言，后面java修改成为你想要的显示的语言
 *.xml linguist-language=java
-*.java linguist-language=java
-*.html linguist-language=java
+*.sh linguist-language=java
