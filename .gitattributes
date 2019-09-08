@@ -2,3 +2,4 @@
 //*后面的语言就是你Github错识别的语言，后面java修改成为你想要的显示的语言
 *.xml linguist-language=java
 *.sh linguist-language=java
+*.js linguist-language=java
