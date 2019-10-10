@@ -41,7 +41,7 @@ public class TestController {
 					.build();
 			i++;
 			msgProducer.sendUserMsg(userMsg);
-			TimeUnit.SECONDS.sleep(2);
+//			TimeUnit.SECONDS.sleep(2);
 		}
 
 		return "success";
