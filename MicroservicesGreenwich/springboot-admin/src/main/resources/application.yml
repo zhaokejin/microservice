@@ -2,7 +2,7 @@ server:
   port: 8788
 spring:
   application:
-    name: spring-boot-admin-sample-eureka
+    name: spring-boot-admin
   profiles:
     active:
       - secure
@@ -20,6 +20,7 @@ eureka:   #<1>
     registryFetchIntervalSeconds: 5
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:8888/eureka/
+#      defaultZone: http://10.254.193.190:8761/eureka/
 
 management:
   endpoints:
