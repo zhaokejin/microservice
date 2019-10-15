@@ -6,8 +6,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @EnableFeignClients
 @SpringBootApplication
-public class ConsumerFeginApplication {
+public class ConsumerFeginWithHystrixApplication {
   public static void main(String[] args) {
-    SpringApplication.run(ConsumerFeginApplication.class, args);
+    SpringApplication.run(ConsumerFeginWithHystrixApplication.class, args);
   }
 }
