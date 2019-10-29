@@ -15,6 +15,7 @@
 - microservice-consumer-ribbon-with-hystrix：**Ribbon使用hystrix**
 - microservice-discovery-eureka：**Eureka Server服务注册中心**
 - microservice-flowable：**flowable微服务**
+- microservice-dynamic-mybatisplus3：**mybatis plus动态多数据源**
 - microservice-flowable-feign：**fegin调用微服务案例（返回流等）**
 - microservice-gateway-zuul：**zuul网关相关**
 - microservice-hystrix-dashboard：**Hystrix Dashboard**
@@ -23,6 +24,10 @@
 - microservice-provider-mybatis-plus：**服务提供者mybatis-plus版本**
 - microservice-provider-sleuth-zipkin：**Sleuth与Zipkin配合使用**
 - microservice-provider-user：**服务提供者使用内置h2数据库**
+- microservice-springsession-redis：**springsession共享**
+- microservices-config-client：**配置文件客户端**
+- microservices-config-server：**配置文件服务端**
+- microservice-config-client-refresh：**配置文件动态刷新**
 - microservice-simple-consumer-movie：**简单的基于h2数据库的消费者**
 - microservice-simple-provider-user：**简单的基于h2数据库的提供者**
 - microservices-docker：**微服务docker部署demo**
@@ -42,6 +47,9 @@
 - rocketmq-producer-demo：**RocketMQ提供者demo**
 - springboot-admin：**SpringBoot Admin监控管理**
 - springboot-apollo：**SpringBoot拉取apollo配置demo**
+- springboot-zookeeper-curator：**zookeeper分布式锁**
+- microservice-mybatis-plus-custom-multiple-data-sources：**mp自定义多数据源 **
+- microservice-mybatis-plus-multiple-data-sources：**mp动态数据源**
 
 
 
