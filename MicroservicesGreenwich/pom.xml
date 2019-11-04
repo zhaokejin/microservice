@@ -48,5 +48,15 @@
         <module>microservices-mybatis-plus</module>
 
 
+
+
+
+
+
+        <module>spring-boot-banner</module>
+        <module>spring-boot-lock-redis</module>
+        <module>spring-boot-actuator-prometheus-grafana</module>
+
+
     </modules>
 </project>
