@@ -48,8 +48,10 @@
 - springboot-admin：**SpringBoot Admin监控管理**
 - springboot-apollo：**SpringBoot拉取apollo配置demo**
 - springboot-zookeeper-curator：**zookeeper分布式锁**
-- microservice-mybatis-plus-custom-multiple-data-sources：**mp自定义多数据源 **
+- microservice-mybatis-plus-custom-multiple-data-sources：**mp自定义多数据源**
 - microservice-mybatis-plus-multiple-data-sources：**mp动态数据源**
+- microservice-mybatis-custom-multiple-data-sources：**mybatis自定义多数据源**  待实现
+- microservice-mybatis-plus-multiple-data-sources-durid：**[阿里连接池整合mp实现动态数据源]( https://gitee.com/baomidou/dynamic-datasource-spring-boot-starter/tree/master/samples )**
 
 
 
