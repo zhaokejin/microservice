@@ -1,6 +1,6 @@
 package com.example.dao;
  
-import com.example.entity.Mongo;
+import com.example.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -20,29 +20,28 @@ public class MongoTestDao {
      * 创建对象
      */
     @Transactional(rollbackFor = Throwable.class)
-    public void saveTest(Mongo test) {
+    public void saveTest(User test) {
         mongoTemplate.save(test);
-        int i = 1/0;
     }
  
     /**
      * 根据用户名查询对象
      * @return
      */
-    public Mongo findTestByName(String name) {
+    public User findTestByName(String name) {
         Query query=new Query(Criteria.where("name").is(name));
-        Mongo mgt =  mongoTemplate.findOne(query , Mongo.class);
+        User mgt =  mongoTemplate.findOne(query , User.class);
         return mgt;
     }
  
     /**
      * 更新对象
      */
-    public void updateTest(Mongo test) {
-        Query query=new Query(Criteria.where("id").is(test.getId()));
-        Update update= new Update().set("age", test.getAge()).set("name", test.getName());
+    public void updateTest(User user) {
+        Query query=new Query(Criteria.where("userId").is(user.getUserId()));
+        Update update= new Update().set("password", user.getPassword()).set("userName", user.getUserName());
         //更新查询返回结果集的第一条
-        mongoTemplate.updateFirst(query,update,Mongo.class);
+        mongoTemplate.updateFirst(query,update,User.class);
         //更新查询返回结果集的所有
 //         mongoTemplate.updateMulti(query,update,Mongo.class);
     }
@@ -53,6 +52,6 @@ public class MongoTestDao {
      */
     public void deleteTestById(Integer id) {
         Query query=new Query(Criteria.where("id").is(id));
-        mongoTemplate.remove(query,Mongo.class);
+        mongoTemplate.remove(query,User.class);
     }
 }
