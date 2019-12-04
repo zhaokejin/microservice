@@ -23,10 +23,12 @@ public class UserServiceImpl implements UserService {
     @Override
     @Transactional(rollbackFor = Exception.class)
     public int saveMysqlMongoDb(User user) {
-        mtdao.saveTest(user);
-        userDao.insert(user);
 
-        int i = 1/0;
+        userDao.insert(user);
+        mtdao.saveTest(user);
+        if(null!=user){
+            throw new RuntimeException("异常失败");
+        }
 
         return 0;
     }
