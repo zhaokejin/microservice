@@ -47,15 +47,10 @@
         <module>cas-test-zuul</module>
         <module>microservices-mybatis-plus</module>
 
-
-
-
-
-
-
         <module>spring-boot-banner</module>
         <module>spring-boot-lock-redis</module>
         <module>spring-boot-actuator-prometheus-grafana</module>
+        <module>microservices-boot-admin</module>
 
 
     </modules>
