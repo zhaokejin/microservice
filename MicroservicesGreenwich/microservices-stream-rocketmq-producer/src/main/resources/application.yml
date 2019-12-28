@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: microservices-stream-rocketmq-producer
+  cloud:
+    stream:
+      rocketmq:
+        binder:
+          name-server: 127.0.0.1:9876
+      bindings:
+        output:
+          # Ö¸¶¨topic
+          destination: stream-test-topic
