@@ -1,5 +1,6 @@
 package cn.cicoding.microservicesstreamrocketmqproducer;
 
+import cn.cicoding.microservicesstreamrocketmqproducer.source.MySource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.stream.annotation.EnableBinding;
@@ -9,7 +10,7 @@ import org.springframework.cloud.stream.messaging.Source;
  * start mqnamesrv.cmd
  * start mqbroker.cmd -n 127.0.0.1:9876 autoCreateTopicEnable=true
  */
-@EnableBinding(Source.class)
+@EnableBinding({Source.class, MySource.class})
 @SpringBootApplication
 public class MicroservicesStreamRocketmqProducerApplication {
 
