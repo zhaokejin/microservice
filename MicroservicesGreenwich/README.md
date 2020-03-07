@@ -52,6 +52,11 @@
 - microservice-mybatis-plus-multiple-data-sources：**mp动态数据源**
 - microservice-mybatis-custom-multiple-data-sources：**mybatis自定义多数据源**  待实现
 - microservice-mybatis-plus-multiple-data-sources-durid：**[阿里连接池整合mp实现动态数据源]( https://gitee.com/baomidou/dynamic-datasource-spring-boot-starter/tree/master/samples )**
+- spring-boot-banner：**自定义banner**
+- spring-annotation：**spring所有注解打印**
+- spring-boot-docker-push-server：**springboot工程上传到docker**
+- spring-boot-lock-redis：**springboot使用redis分布式锁**
+- spring-boot-actuator-prometheus-grafana：**spring-boot-actuator-prometheus-grafana监控**
 
 
 
