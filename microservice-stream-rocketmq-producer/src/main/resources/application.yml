@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    stream:
+      rocketmq:
+        binder:
+          name-server: 127.0.0.1:9876
+      bindings:
+        MyOutput:
+          destination: my-stream-test-topic
+        output:
+          # 指定topic
+          destination: stream-test-topic
