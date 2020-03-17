@@ -17,6 +17,7 @@
 - flowable-task：**FLowable整合Task**
 - microservice-consumer：**服务消费者样例**
 - microservice-consumer-feign：**服务消费者Fegin使用**
+- microservice-consumer-feign-file：**服务消费者 - 上传文件接口**
 - microservice-consumer-feign-with-hystrix：**Fegin使用hystrix**
 - microservice-consumer-movie-feign-hystrix-fallback-factory：**获得造成fallback的原因**
 - microservice-consumer-movie-feign-hystrix-stream：**Feign暴露`/actuaotr/hystrix.stream`端点**
@@ -31,6 +32,7 @@
 - microservice-hystrix-dashboard：**Hystrix Dashboard**
 - microservice-hystrix-turbine：**监控数据聚合-Turbine**
 - microservice-provider：**服务提供者**
+- microservice-provider-file：**服务提供者 - 上传文件接口**
 - microservice-provider-mybatis-plus：**服务提供者mybatis-plus版本**
 - microservice-provider-sleuth-zipkin：**Sleuth与Zipkin配合使用**
 - microservice-provider-user：**服务提供者使用内置h2数据库**
@@ -42,8 +44,12 @@
 - microservice-simple-provider-user：**简单的基于h2数据库的提供者**
 - microservice-docker：**微服务docker部署demo**
 - microservices-gateway：**springcloud gateway案例**
-- microservice-log4j2：**log4j2日志配置**
+- microservice-log4j2：**springboot使用log4j2日志配置**
 - microservice-logback：**logback日志配置**
+- microservice-springboot-redis: **springboot2集成redis**
+- microservice-springsession-redis： **springboot2使用redis session共享**
+- microservice-springboot-mongodb：**springboot2整合mongodb4.0，支持事务**
+- microservice-mybatis-plus：**springboot整合mybatis plus**
 - microservice-sharding-jdbc：**ShardingSphere取模分库分表**   √
 - microservice-sharding-jdbc-all：
 - microservice-sharding-jdbc-custom-tables：**ShardingSphere自定义分片算法，不分库，只分表案例**  √
