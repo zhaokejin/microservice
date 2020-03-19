@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>cn.cicoding</groupId>
+	<artifactId>MicroservicesGreenwich</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.10.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<modules>
+		<module>microservice-consumer</module>
+		<module>microservice-consumer-ribbon</module>
+		<module>microservice-provider</module>
+		<module>microservice-provider-file</module>
+		<module>microservice-provider-sleuth-zipkin</module>
+		<module>microservice-consumer-feign</module>
+		<module>springboot-admin</module>
+		<module>springboot-apollo</module>
+		<module>microservice-provider-user</module>
+		<module>microservice-gateway-zuul</module>
+		<module>microservice-provider-mybatis-plus</module>
+		<module>microservice-simple-consumer-movie</module>
+		<module>microservice-simple-provider-user</module>
+		<module>microservice-consumer-ribbon-with-hystrix</module>
+		<module>microservice-consumer-feign-with-hystrix</module>
+		<module>microservice-consumer-movie-feign-hystrix-fallback-factory</module>
+		<module>microservice-consumer-movie-feign-hystrix-stream</module>
+		<module>microservice-hystrix-dashboard</module>
+		<module>microservice-hystrix-turbine</module>
+		<module>microservice-config-server</module>
+		<module>rocketmq-consume-demo</module>
+		<module>rocketmq-producer-demo</module>
+		<module>microservice-discovery-eureka</module>
+		<module>microservice-flowable</module>
+		<module>microservice-flowable-feign</module>
+		<module>microservice-logback</module>
+		<module>microservice-mybatis-plus-multiple-data-sources</module>
+        <module>microservice-eureka-ha</module>
+        <module>microservice-consumer-feign-file</module>
+        <module>cas-test-zuul</module>
+        <module>microservice-mybatis-plus</module>
+        <module>microservice-log4j2</module>
+        <module>microservice-gateway</module>
+        <module>microservice-springboot-mongodb</module>
+        <module>microservice-proguard-jar</module>
+        <module>springboot-logback</module>
+        <module>microservice-docker</module>
+        <module>microservice-sharding-jdbc-user-dept-join</module>
+        <module>microservice-sharding-jdbc</module>
+		<module>microservice-sharding-jdbc-all</module>
+		<module>microservice-sharding-jdbc-custom-tables</module>
+		<module>microservice-sharding-jdbc-fixed-db-tables</module>
+		<module>microservice-sharding-jdbc-db-tables</module>
+		<module>microservice-sharding-jdbc-master-slave</module>
+		<module>microservice-sharding-jdbc-official-demo</module>
+		<module>microservice-sharding-jdbc-tables</module>
+        <module>spring-boot-banner</module>
+        <module>spring-boot-lock-redis</module>
+        <module>spring-boot-actuator-prometheus-grafana</module>
+        <module>microservice-boot-admin</module>
+        <module>microservice-springboot-redis</module>
+        <module>microservice-stream-rocketmq-consumer</module>
+        <module>microservice-stream-rocketmq-producer</module>
+
+
+    </modules>
+</project>
