@@ -1,11 +1,13 @@
-# springcloud-greenwich
+# SpringCloud-Greenwich
 
-# springcloud-greenwich
+# SpringBoot 2.X
 
 - SpringCloud GreenWich版本学习
-- 各种demo配置
+- SpringBoot 2.X学习demo
+- 各种配置
 - 接下来我们会编写gateway使用demo
 - docker： **docker启动脚本，持续添加中**
+- cas-test-zuul：**zuul转发携带token认证**
 
 
 - eureka-security: **eureka整合security到注册中心**
@@ -27,7 +29,7 @@
 -  microservice-eureka-ha：**Eureka Server高可用服务注册中心**
 - microservice-flowable：**flowable微服务**
 - microservice-dynamic-mybatisplus3：**mybatis plus动态多数据源**
-- microservice-flowable-feign：**fegin调用微服务案例（返回流等）**
+- microservice-flowable-feign：**feign调用微服务案例（返回流等）**
 - microservice-gateway-zuul：**zuul网关相关**
 - microservice-hystrix-dashboard：**Hystrix Dashboard**
 - microservice-hystrix-turbine：**监控数据聚合-Turbine**
@@ -43,7 +45,7 @@
 - microservice-simple-consumer-movie：**简单的基于h2数据库的消费者**
 - microservice-simple-provider-user：**简单的基于h2数据库的提供者**
 - microservice-docker：**微服务docker部署demo**
-- microservices-gateway：**springcloud gateway案例**
+- microservices-gateway：**springcloud gateway案例 携带token认证**
 - microservice-log4j2：**springboot使用log4j2日志配置**
 - microservice-logback：**logback日志配置**
 - microservice-springboot-redis: **springboot2集成redis**
@@ -71,13 +73,13 @@
 - microservice-mybatis-custom-multiple-data-sources：**mybatis自定义多数据源**  待实现
 - microservice-mybatis-plus-multiple-data-sources-durid：**[阿里连接池整合mp实现动态数据源]( https://gitee.com/baomidou/dynamic-datasource-spring-boot-starter/tree/master/samples )**
 - microservice-boot-admin：**springboot admin管理监控**
-- microservice-stream-rocketmq-producer : 
 - spring-boot-banner：**自定义banner**
 - spring-annotation：**spring所有注解打印**
 - spring-boot-docker-push-server：**springboot工程上传到docker**
 - spring-boot-lock-redis：**springboot使用redis分布式锁**
 - spring-boot-logback：**springboot使用logback**
 - spring-boot-actuator-prometheus-grafana：**spring-boot-actuator-prometheus-grafana监控**
+- springboot-admin：**springboot admin监控**
 
 
 
