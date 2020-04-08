@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>cn.cicoding</groupId>
-    <artifactId>nosql</artifactId>
+    <artifactId>nosql-starter-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>nosql</name>
     <description>Demo project for Spring Boot</description>
