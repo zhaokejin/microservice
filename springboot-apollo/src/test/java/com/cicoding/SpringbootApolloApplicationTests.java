@@ -1,4 +1,4 @@
-package com.cicoding.springbootapollo;
+package com.cicoding;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
