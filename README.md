@@ -26,7 +26,7 @@
 - microservice-consumer-ribbon：**服务消费者Ribbon使用**
 - microservice-consumer-ribbon-with-hystrix：**Ribbon使用hystrix**
 - microservice-discovery-eureka：**Eureka Server服务注册中心**
--  microservice-eureka-ha：**Eureka Server高可用服务注册中心**
+- microservice-eureka-ha：**Eureka Server高可用服务注册中心**
 - microservice-flowable：**flowable微服务**
 - microservice-dynamic-mybatisplus3：**mybatis plus动态多数据源**
 - microservice-flowable-feign：**feign调用微服务案例（返回流等）**
