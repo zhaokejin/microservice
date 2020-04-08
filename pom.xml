@@ -61,6 +61,8 @@
 		<module>microservice-sharding-jdbc-master-slave</module>
 		<module>microservice-sharding-jdbc-official-demo</module>
 		<module>microservice-sharding-jdbc-tables</module>
+		<module>nosql-starter</module>
+		<module>nosql-starter-demo</module>
         <module>spring-boot-banner</module>
         <module>spring-boot-lock-redis</module>
         <module>spring-boot-actuator-prometheus-grafana</module>
