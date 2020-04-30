@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * 〈一句话功能简述〉<br>
  * 〈${DESCRIPTION}〉
@@ -30,7 +32,7 @@ public class TestController {
 	@ResponseBody
 	public String Ttest(String info) throws Exception {
 		int i = 0;
-		while (i < 10){
+		while (i < 2){
 			UserMsg userMsg = UserMsg.builder()
 					.userId(10000 + i)
 					.name("张三" + i)
@@ -39,7 +41,8 @@ public class TestController {
 					.build();
 			i++;
 			msgProducer.sendUserMsg(userMsg);
-//			TimeUnit.SECONDS.sleep(2);
+			msgProducer.streamTopic(userMsg);
+			TimeUnit.SECONDS.sleep(2);
 		}
 
 		return "success";

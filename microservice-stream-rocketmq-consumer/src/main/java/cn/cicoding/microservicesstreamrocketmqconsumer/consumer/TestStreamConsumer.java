@@ -1,5 +1,6 @@
 package cn.cicoding.microservicesstreamrocketmqconsumer.consumer;
 
+import cn.cicoding.microservicesstreamrocketmqconsumer.sink.MySink;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.cloud.stream.messaging.Sink;
@@ -16,8 +17,12 @@ public class TestStreamConsumer {
 
 	@StreamListener(Sink.INPUT)
 	public void receive(String messageBody){
-		log.info("通过stream收到消息，messageBody = {}", messageBody);
+		log.info("通过INPUT收到消息，messageBody = {}", messageBody);
 	}
 
+	@StreamListener(MySink.MYINPUT)
+	public void myinput(String messageBody){
+		log.info("通过MYINPUT收到消息，messageBody = {}", messageBody);
+	}
 
 }

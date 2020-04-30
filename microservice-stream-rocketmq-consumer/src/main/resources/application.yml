@@ -5,14 +5,15 @@ spring:
     stream:
       rocketmq:
         binder:
-          name-server: 127.0.0.1:9876
+          name-server: 10.254.193.122:9876
       bindings:
-        MyInput:
+        input1:
           destination: my-stream-test-topic
-          group: binding-group
+          group: my-stream-test-topic-group1
         input:
           destination: stream-test-topic
-          # rocketmqÒ»¶¨ÒªÉèÖÃgroup£¨Ëæ±ãĞ´£© ÆäËûµÄmq¿ÉÁô¿Õ
+          # rocketmqä¸€å®šè¦è®¾ç½®groupï¼ˆéšä¾¿å†™ï¼‰ å…¶ä»–çš„mqå¯ç•™ç©º
           group: binding-group
+
 server:
   port: 8088

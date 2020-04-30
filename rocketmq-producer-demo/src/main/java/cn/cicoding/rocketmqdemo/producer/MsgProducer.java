@@ -19,4 +19,8 @@ public class MsgProducer {
     public void sendUserMsg(UserMsg userMsg){
         rocketMQTemplate.syncSend(Constant.TOPIC, JSON.toJSONString(userMsg));
     }
+
+    public void streamTopic(UserMsg userMsg){
+        rocketMQTemplate.syncSend(Constant.STREAM_TOPIC, JSON.toJSONString(userMsg));
+    }
 }

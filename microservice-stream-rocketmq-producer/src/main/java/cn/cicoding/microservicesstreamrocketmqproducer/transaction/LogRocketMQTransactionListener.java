@@ -11,6 +11,7 @@ import org.springframework.messaging.Message;
 import org.springframework.messaging.MessageHeaders;
 
 /**
+ * 消息是否消费事务回查
  * https://github.com/alibaba/spring-cloud-alibaba/wiki/RocketMQ
  * @author zhaokejin
  * @description
