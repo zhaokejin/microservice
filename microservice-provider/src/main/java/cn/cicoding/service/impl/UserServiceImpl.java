@@ -36,6 +36,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserDomain findById(Integer id) {
-        return userDao.findById(id);
+        throw new RuntimeException("用户信息被锁定！");
+//        return userDao.findById(id);
     }
 }

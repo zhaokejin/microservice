@@ -6,8 +6,25 @@ spring:
   profiles:
     active:
       - secure
-
-
+  boot:
+    admin:
+      ui:
+        title: spring-boot-admin-server
+      notify:
+        mail:
+          from: 210006540@qq.com
+          to: 427800787@qq.com
+  mail:
+    host: smtp.qq.com
+    username: 210006540@qq.com
+    password: umgrwyxkenhabjgc
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
 # tag::configuration-eureka[]
 eureka:   #<1>
   instance:
@@ -20,7 +37,7 @@ eureka:   #<1>
     registryFetchIntervalSeconds: 5
     serviceUrl:
 #      defaultZone: http://${eureka.instance.hostname}:8888/eureka/
-      defaultZone: http://10.254.193.190:8761/eureka/
+      defaultZone: http://10.254.193.199:8761/eureka/
 
 management:
   endpoints:
