@@ -1,0 +1,17 @@
+server:
+  port: 8888
+eureka:
+  client:
+    # 是否要注册到其他Eureka Server实例
+    register-with-eureka: false
+    # 是否要从其他Eureka Server实例获取数据
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8888/eureka/
+
+spring:
+  application:
+    name: eureka-server
+
+logging:
+  file: ${spring.application.name}.log
