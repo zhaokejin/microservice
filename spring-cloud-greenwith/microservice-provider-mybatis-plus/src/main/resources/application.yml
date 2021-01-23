@@ -1,0 +1,59 @@
+server:
+  port: 8088
+
+logging:
+  level:
+    root: info
+    cn.cicoding: debug
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3309/mytest?useSSL=false&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&allowPublicKeyRetrieval=true&serverTimezone=UTC&autoReconnect=true
+    username: root
+    password: root
+    #自动提
+    default-auto-commit: true
+    #指定updates是否自动提交
+    auto-commit: true
+    maximum-pool-size: 100
+    max-idle: 10
+    max-wait: 10000
+    min-idle: 5
+    initial-size: 5
+    validation-query: SELECT 1
+    test-on-borrow: false
+    test-while-idle: true
+    # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+    time-between-eviction-runs-millis: 18800
+    # 配置一个连接在池中最小生存的时间，单位是毫秒
+    minEvictableIdleTimeMillis: 300000
+#  activemq:
+#    broker-url:
+  application:
+    name: microservice-provider-mp
+
+#升级mybatis plus替换原有的配置信息
+#mybatis:
+#  configuration:
+#    map-underscore-to-camel-case: true
+#  mapper-locations: classpath:mapper/*.xml
+#  type-aliases-package: com.luban.model
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true #是否开启自动驼峰命名规则（camel case）映射，即从经典数据库列名 A_COLUMN（下划线命名） 到经典 Java 属性名 aColumn（驼峰命名） 的类似映射。
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: cn.cicoding.mp.entity
+  global-config:
+    db-config:
+      table-prefix: t_
+      table-underline: false
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka/
+#  instance:
+#    instance-id: kpbs
+    prefer-ip-address: true
+
