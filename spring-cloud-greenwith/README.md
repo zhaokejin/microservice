@@ -80,6 +80,7 @@
 - spring-boot-logback：**springboot使用logback**
 - spring-boot-actuator-prometheus-grafana：**spring-boot-actuator-prometheus-grafana监控**
 - springboot-admin：**springboot admin监控**
+- springboot-jasypt：**SpringBoot使用jasypt加解密密码**
 
 
 
