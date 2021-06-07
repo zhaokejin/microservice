@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: microservice-stream-rocketmq-consumer
+  cloud:
+    stream:
+      rocketmq:
+        binder:
+          name-server: 10.254.193.122:9876
+      bindings:
+        input1:
+          destination: my-stream-test-topic
+          group: my-stream-test-topic-group1
+        input:
+          destination: stream-test-topic
+          # rocketmq一定要设置group（随便写） 其他的mq可留空
+          group: binding-group
+
+server:
+  port: 8088
