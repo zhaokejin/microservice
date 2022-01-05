@@ -1,0 +1,12 @@
+2021-08-23 21:01:32,929 WARN [master-db] jdbc:mysql://127.0.0.1:3306/nacos?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
+
+2021-08-23 21:01:36,596 WARN isQuickStart:false
+
+2021-08-29 14:01:50,509 WARN [master-db] jdbc:mysql://127.0.0.1:3306/nacos?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
+
+2021-08-29 14:01:54,594 WARN isQuickStart:false
+
+2021-08-29 14:06:39,551 WARN [master-db] jdbc:mysql://192.168.11.50:3306/nacos?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
+
+2021-08-29 14:06:43,442 WARN isQuickStart:false
+
