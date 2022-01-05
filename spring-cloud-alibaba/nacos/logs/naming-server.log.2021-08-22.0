@@ -1,0 +1,47 @@
+2021-08-22 21:57:28,080 INFO GlobalConfig{taskDispatchPeriod=2000, batchSyncKeyCount=1000, syncRetryDelay=5000, dataWarmup=false, expireInstance=true, loadDataRetryDelayMillis=30000}
+
+2021-08-22 21:57:29,318 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2021-08-22 21:57:29,320 INFO listen for service meta change
+
+2021-08-22 21:57:33,064 INFO [NACOS-DISTRO] healthy server list changed, old: [192.168.0.109:8848], new: [192.168.0.109:8848]
+
+2021-08-22 22:00:55,081 INFO creating empty service public:DEFAULT_GROUP@@spring-cloud-alibaba-provider-file
+
+2021-08-22 22:00:55,334 INFO [NEW-SERVICE] {"name":"DEFAULT_GROUP@@spring-cloud-alibaba-provider-file","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":0,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1629640855086,"checksum":"4dc6e67644aaea1a2a4ba2d0cd2e7721","clusterMap":{},"empty":true}
+
+2021-08-22 22:00:55,341 WARN cluster: DEFAULT not found, ip: {"instanceId":"127.0.0.1#8080#DEFAULT#DEFAULT_GROUP@@spring-cloud-alibaba-provider-file","ip":"127.0.0.1","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@spring-cloud-alibaba-provider-file","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1629640855059,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}, will create new cluster with default configuration.
+
+2021-08-22 22:00:55,366 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@spring-cloud-alibaba-provider-file, value: {"instanceList":[{"instanceId":"127.0.0.1#8080#DEFAULT#DEFAULT_GROUP@@spring-cloud-alibaba-provider-file","ip":"127.0.0.1","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@spring-cloud-alibaba-provider-file","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1629640855059,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]}
+
+2021-08-22 22:00:57,297 INFO creating empty service public:DEFAULT_GROUP@@spring-cloud-alibaba-consumer-feign-file
+
+2021-08-22 22:00:57,298 INFO [NEW-SERVICE] {"name":"DEFAULT_GROUP@@spring-cloud-alibaba-consumer-feign-file","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":0,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1629640857297,"checksum":"2b4e3fed80ca3064532ed4fbd534958e","clusterMap":{},"empty":true}
+
+2021-08-22 22:00:57,298 WARN cluster: DEFAULT not found, ip: {"instanceId":"127.0.0.1#8082#DEFAULT#DEFAULT_GROUP@@spring-cloud-alibaba-consumer-feign-file","ip":"127.0.0.1","port":8082,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@spring-cloud-alibaba-consumer-feign-file","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1629640857296,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}, will create new cluster with default configuration.
+
+2021-08-22 22:00:57,299 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@spring-cloud-alibaba-consumer-feign-file, value: {"instanceList":[{"instanceId":"127.0.0.1#8082#DEFAULT#DEFAULT_GROUP@@spring-cloud-alibaba-consumer-feign-file","ip":"127.0.0.1","port":8082,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@spring-cloud-alibaba-consumer-feign-file","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1629640857296,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]}
+
+2021-08-22 22:17:20,299 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@spring-cloud-alibaba-provider-file, value: {"instanceList":[]}
+
+2021-08-22 22:17:20,479 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@spring-cloud-alibaba-consumer-feign-file, value: {"instanceList":[]}
+
+2021-08-22 22:17:38,540 WARN [NamingServerHttpClientManager] Start destroying HTTP-Client
+
+2021-08-22 22:17:38,550 WARN [NamingServerHttpClientManager] Destruction of the end
+
+2021-08-22 22:17:52,216 ERROR [HEALTH-CHECK] error while processing NIO task
+
+java.lang.InterruptedException: null
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2088)
+	at java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+	at com.alibaba.nacos.naming.healthcheck.TcpSuperSenseProcessor.processTask(TcpSuperSenseProcessor.java:137)
+	at com.alibaba.nacos.naming.healthcheck.TcpSuperSenseProcessor.run(TcpSuperSenseProcessor.java:154)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)

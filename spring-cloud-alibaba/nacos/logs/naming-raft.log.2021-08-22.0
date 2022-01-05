@@ -1,0 +1,48 @@
+2021-08-22 21:57:28,069 INFO raft peers changed: [Member{ip='192.168.0.109', port=8848, state=UP, extendInfo={raftPort=7848}}]
+
+2021-08-22 21:57:28,127 INFO initializing Raft sub-system
+
+2021-08-22 21:57:28,128 INFO finish loading all datums, size: 0 cost 1 ms.
+
+2021-08-22 21:57:28,140 INFO cache loaded, datum count: 0, current term: 0
+
+2021-08-22 21:57:28,140 INFO finish to load data from disk, cost: 13 ms.
+
+2021-08-22 21:57:28,145 INFO timer started: leader timeout ms: 15000, heart-beat timeout ms: 5000
+
+2021-08-22 21:57:28,757 INFO leader timeout, start voting,leader: {"ip":"192.168.0.109:8848","term":0,"leaderDueMs":15486,"heartbeatDueMs":5000,"state":"FOLLOWER"}, term: 0
+
+2021-08-22 21:57:29,283 INFO add listener: com.alibaba.nacos.naming.domains.meta.00-00---000-NACOS_SWITCH_DOMAIN-000---00-00
+
+2021-08-22 21:57:29,320 INFO add listener: com.alibaba.nacos.naming.domains.meta.
+
+2021-08-22 21:57:33,059 WARN start to close old raft protocol!!!
+
+2021-08-22 21:57:33,059 WARN stop old raft protocol task for notifier
+
+2021-08-22 21:57:33,059 WARN stop old raft protocol task for master task
+
+2021-08-22 21:57:33,059 WARN stop old raft protocol task for heartbeat task
+
+2021-08-22 21:57:33,059 WARN clean old cache datum for old raft
+
+2021-08-22 21:57:33,059 WARN start to close old raft protocol!!!
+
+2021-08-22 21:57:33,059 WARN stop old raft protocol task for notifier
+
+2021-08-22 21:57:33,059 WARN stop old raft protocol task for master task
+
+2021-08-22 21:57:33,059 WARN stop old raft protocol task for heartbeat task
+
+2021-08-22 21:57:33,059 WARN clean old cache datum for old raft
+
+2021-08-22 21:57:33,059 WARN start to move old raft protocol metadata
+
+2021-08-22 21:57:33,062 WARN start to move old raft protocol metadata
+
+2021-08-22 21:57:33,063 INFO raft peers changed: [Member{ip='192.168.0.109', port=8848, state=UP, extendInfo={lastRefreshTime=1629640653062, raftPort=7848, version=1.4.2}}]
+
+2021-08-22 22:00:55,098 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@spring-cloud-alibaba-provider-file
+
+2021-08-22 22:00:57,297 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@spring-cloud-alibaba-consumer-feign-file
+
