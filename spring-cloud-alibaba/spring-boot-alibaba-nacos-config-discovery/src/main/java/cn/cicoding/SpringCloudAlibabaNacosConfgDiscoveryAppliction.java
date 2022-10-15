@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author zhaokejin
- * @description
+ * @description springboot工程注册到nacos中
  * @date 2021-09-03
  */
 @SpringBootApplication
