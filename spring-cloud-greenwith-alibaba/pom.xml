@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.example</groupId>
+	<artifactId>springcloud-greenwich-Alibaba</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+
+	<modules>
+		<module>microservice-alibaba-provider</module>
+		<module>microservice-alibaba-consumer-ribbon</module>
+		<module>microservice-alibaba-consumer-feign</module>
+		<module>microservice-alibaba-config</module>
+		<module>microservice-alibaba-config-dataId-profiles</module>
+		<module>microservice-alibaba-config-group</module>
+		<module>microservice-alibaba-config-namespace</module>
+		<module>microservice-alibaba-sentinel-current-limiting</module>
+		<module>microservice-alibaba-sentinel-annotation</module>
+
+		<module>microservice-provider-sleuth-zipkin</module>
+		<module>microservice-provider-user</module>
+		<module>microservice-gateway-zuul</module>
+		<module>microservice-provider-mybatis-plus</module>
+		<module>microservice-consumer-movie-ribbon-config-java</module>
+		<module>microservice-consumer-movie-ribbon-config-properties</module>
+		<module>microservice-consumer-movie-feign-config-properties</module>
+		<module>microservice-consumer-movie-feign-config-java</module>
+		<module>microservice-consumer-ribbon-with-hystrix</module>
+		<module>microservice-consumer-feign-with-hystrix</module>
+		<module>microservice-consumer-movie-feign-hystrix-fallback-factory</module>
+		<module>microservice-consumer-movie-feign-hystrix-stream</module>
+		<module>microservice-hystrix-dashboard</module>
+		<module>microservice-hystrix-turbine</module>
+
+
+	</modules>
+</project>
