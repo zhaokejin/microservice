@@ -13,3 +13,14 @@ spring:
 
 # 配置信息 查看
 # https://github.com/alibaba/spring-cloud-alibaba/wiki/Nacos-discovery
+management:
+  trace:
+    http:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
