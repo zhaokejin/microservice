@@ -1,0 +1,37 @@
+server:
+  port: 8000
+
+####服务监控server端
+spring:
+  application:
+    name: wireless-admin-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  security:
+    user:
+      name: admin
+      password: admin
+
+management:
+  trace:
+    http:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+logging:
+  file:
+    name: boot.log
+  pattern:
+    ####日志高亮
+    file: '%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID}){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx'
+
+#info.groupId: @project.groupId@
+#info.artifactId: @project.artifactId@
+#info.version: @project.version@
