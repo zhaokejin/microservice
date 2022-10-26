@@ -33,5 +33,6 @@ build/
 .vscode/
 
 /log/
+/logs/
 /nacos-server/
 /nacos-server-1.4.4.zip
