@@ -1,4 +1,0 @@
-logging:
-  level:
-    root: info
-    cn.cicoding: debug
