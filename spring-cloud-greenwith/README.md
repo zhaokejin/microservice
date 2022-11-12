@@ -1,15 +1,8 @@
 # SpringCloud-Greenwich
 
-# SpringBoot 2.X
-
-- SpringCloud GreenWich版本学习
-- SpringBoot 2.X学习demo
-- 各种配置
-- 接下来我们会编写gateway使用demo
+# SpringCloud GreenWich版本学习
 - docker： **docker启动脚本，持续添加中**
 - cas-test-zuul：**zuul转发携带token认证**
-
-
 - eureka-security: **eureka整合security到注册中心**
 - flowable-admin：**FLowable整合admin**
 - flowable-basic：**FLowable整合Basic**
@@ -73,14 +66,7 @@
 - microservice-mybatis-custom-multiple-data-sources：**mybatis自定义多数据源**  待实现
 - microservice-mybatis-plus-multiple-data-sources-durid：**[阿里连接池整合mp实现动态数据源]( https://gitee.com/baomidou/dynamic-datasource-spring-boot-starter/tree/master/samples )**
 - microservice-boot-admin：**springboot admin管理监控**
-- spring-boot-banner：**自定义banner**
-- spring-annotation：**spring所有注解打印**
-- spring-boot-docker-push-server：**springboot工程上传到docker**
-- spring-boot-lock-redis：**springboot使用redis分布式锁**
-- spring-boot-logback：**springboot使用logback**
-- spring-boot-actuator-prometheus-grafana：**spring-boot-actuator-prometheus-grafana监控**
-- springboot-admin：**springboot admin监控**
-- springboot-jasypt：**SpringBoot使用jasypt加解密密码**
+
 
 
 
