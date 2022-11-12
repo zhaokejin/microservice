@@ -61,11 +61,16 @@ SpringBoot示例
 - **springboot-elasticsearch-rest-high-level-client**   springbboot整合es高级客户端
 - **springboot-redis-dynamic-db**   springbboot整合redis动态插入库
 
+- spring-boot-banner：**自定义banner**
+- spring-annotation：**spring所有注解打印**
+- spring-boot-docker-push-server：**springboot工程上传到docker**
+- spring-boot-lock-redis：**springboot使用redis分布式锁**
+- spring-boot-logback：**springboot使用logback**
+- spring-boot-actuator-prometheus-grafana：**spring-boot-actuator-prometheus-grafana监控**
+- springboot-admin：**springboot admin监控**
+- springboot-jasypt：**SpringBoot使用jasypt加解密密码**
 
 ### SpringBoot SpringCloud Docker交流群
-
-
-
 
 <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=NGdnk09F4UpqMuFh6Wzy9YjCMLhxX1W4&jump_from=webapi"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="SpringBoot社区①群" title="SpringBoot社区①群"></a>
 
