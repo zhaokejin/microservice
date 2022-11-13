@@ -22,7 +22,6 @@
         <module>microservice-provider-sleuth-zipkin</module>
         <module>microservice-consumer-feign</module>
         <module>springboot-admin</module>
-        <module>springboot-apollo</module>
         <module>microservice-provider-user</module>
         <module>microservice-gateway-zuul</module>
         <module>microservice-provider-mybatis-plus</module>
@@ -50,7 +49,6 @@
         <module>microservice-gateway</module>
         <module>microservice-springboot-mongodb</module>
         <module>microservice-proguard-jar</module>
-        <module>springboot-logback</module>
         <module>microservice-docker</module>
         <module>microservice-sharding-jdbc-user-dept-join</module>
         <module>microservice-sharding-jdbc</module>
@@ -63,15 +61,10 @@
         <module>microservice-sharding-jdbc-tables</module>
         <module>nosql-starter</module>
         <module>nosql-starter-demo</module>
-        <module>spring-boot-banner</module>
-        <module>spring-boot-lock-redis</module>
         <module>spring-boot-actuator-prometheus-grafana</module>
         <module>microservice-boot-admin</module>
         <module>microservice-springboot-redis</module>
         <module>microservice-stream-rocketmq-consumer</module>
         <module>microservice-stream-rocketmq-producer</module>
-        <module>springboot-Jasypt</module>
-
-
     </modules>
 </project>
