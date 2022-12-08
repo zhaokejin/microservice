@@ -1,0 +1,11 @@
+.left-item {
+	padding-bottom: 10px;
+}
+
+.left-item-title {
+	font-size: 30px;
+}
+
+.left-item span {
+	display: inline-block;
+}
