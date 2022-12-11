@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html  lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="description" content=""/>
+	<meta name="author" content=""/>
+	<link rel="icon" href="https://v3.bootcss.com/favicon.ico"/>
+
+	<title>注册</title>
+
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+</head>
+<body style="background-color: #f1574c; padding-bottom: 0">
+	<div th:insert="~{header :: nav}"></div>
+	<!--<a th:href="@{/login}">登录</a>-->
+	<div class="container" style="margin-top: 60px">
+		<div class="row" style="margin-top: 100px">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title"><span class="glyphicon glyphicon-console"></span> Register</h3>
+					</div>
+
+
+					<div class="panel-body">
+						<form class="form-horizontal" id="form_register">
+							<div class="form-group" style="margin-top: 30px">
+								<div class="input-group col-md-6 col-md-offset-3">
+									<div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+									<input type="text" maxlength="10" name="username" class="form-control notEmpty" id="ipt_username" placeholder="用户名">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="input-group col-md-6 col-md-offset-3">
+									<div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+									<input type="password" maxlength="20" name="password" class="form-control notEmpty" id="ipt_password" placeholder="密码">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="input-group col-md-6 col-md-offset-3">
+									<div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+									<input type="password" maxlength="20" class="form-control notEmpty" id="ipt_confirm_password" placeholder="确认密码">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="input-group col-md-6 col-md-offset-3">
+									<div class="input-group-addon"><span class="glyphicon glyphicon-folder-close"></span></div>
+									<input type="email" maxlength="30" name="email" class="form-control notEmpty" id="ipt_email" placeholder="电子邮箱">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-offset-2 col-sm-10">
+									<button type="button" onclick="save()" class="btn btn-default">保存</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script th:src="@{/js/jquery/jquery.min.js}"></script>
+<script>
+    function save(){
+        var username = $("#ipt_username").val();
+        if (username == ""){
+            alert("用户名不能为空");
+            return;
+		}
+        var password = $("#ipt_password").val();
+        var confirmPassword = $("#ipt_confirm_password").val();
+        if(password !== confirmPassword){
+            alert("两次输入的密码需要一致");
+            return;
+        }
+
+        $.post("/register", $("#form_register").serialize(), function(result){
+            if(result.code == 200){
+                alert("注册成功", function(){
+                    location.href = "/login";
+                })
+            }else{
+                alert(result.mes);
+            }
+        })
+
+    }
+
+</script>
+</html>
