@@ -1,0 +1,7 @@
+
+spring:
+  devtools:
+    restart:
+      exclude: application.yml
+server:
+  port: 8989
