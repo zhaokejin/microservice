@@ -1,0 +1,6 @@
+spring:
+  mail:
+    host: smtp.qq.com
+    username: 82374126@qq.com
+    password: #<添加授权码不是邮箱的登录密码否则javax.mail.AuthenticationFailedException: 535 Error:错误>
+    # 开启授权码 https://blog.csdn.net/Milan__Kundera/article/details/88724711
