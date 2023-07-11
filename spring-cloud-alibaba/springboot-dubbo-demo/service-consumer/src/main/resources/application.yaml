@@ -1,0 +1,14 @@
+server:
+  port: 14510
+spring:
+  application:
+    name: consumer-serivce
+  main:
+    allow-bean-definition-overriding: true
+dubbo:
+  application:
+    name: consumer-serivce
+  registry:
+    address: nacos://127.0.0.1:8848
+    username: nacos
+    password: nacos
