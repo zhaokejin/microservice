@@ -1,0 +1,83 @@
+= Cicoding API
+
+
+[[_overview]]
+== Overview
+Cicoding API
+
+
+=== Version information
+[%hardbreaks]
+__Version__ : 1.0.0
+
+
+=== URI scheme
+[%hardbreaks]
+__Host__ : localhost:8080
+__BasePath__ : /
+
+
+=== Tags
+
+* 公告相关接口 : 公告相关接口
+
+
+
+
+[[_paths]]
+== Resources
+
+[[_25e062b8715916f35f52ca526ab006c6]]
+=== 公告相关接口
+公告相关接口
+
+
+[[_findnewestusingget]]
+==== 查询最新的一条公告
+....
+GET /notices/newest
+....
+
+
+===== Description
+用于：公告
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_fa86f1a57d6f758a93cb33b59c015654,公告>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Produces
+
+* `*/*`
+
+
+
+
+[[_definitions]]
+== Definitions
+
+[[_fa86f1a57d6f758a93cb33b59c015654]]
+=== 公告
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**content** +
+__optional__|公告内容|string
+|**id** +
+__optional__|id|integer (int32)
+|===
+
+
+
+
+

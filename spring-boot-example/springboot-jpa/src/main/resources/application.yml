@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: spring-boot-jpa-app
+  # 数据库配置
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/test?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&autoReconnect=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+  # jpa 配置
+  jpa:
+    # sql 打印
+    show-sql: true
+    properties:
+      hibernate:
+        # the Hibernate entity manager
+        globally_quoted_identifiers: true
+        # 格式化SQL输出
+        format_sql: true
+    hibernate:
+      # create, create-drop, update, validate
+      # 作用主要用于：自动创建、更新、验证数据库表结构
+      ddl-auto: none
+    database: mysql
+
+
+

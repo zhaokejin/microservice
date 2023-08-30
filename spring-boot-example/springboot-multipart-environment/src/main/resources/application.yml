@@ -1,0 +1,36 @@
+server:
+  port: 8181
+spring:
+  application:
+    name: multipart-environment
+  profiles:
+    active: dev
+
+# 开发环境
+---
+spring:
+  profiles: dev
+test:
+  env: dev
+
+# 测试环境
+---
+spring:
+  profiles: test
+test:
+  env: test
+
+# 仿生环境
+---
+spring:
+  profiles: staging
+test:
+  env: staging
+
+# 生产环境
+---
+spring:
+  profiles: prod
+test:
+  env: prod
+
