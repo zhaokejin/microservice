@@ -87,8 +87,8 @@ CREATE TABLE `c_user`  (
 -- ----------------------------
 -- Records of c_user
 -- ----------------------------
-INSERT INTO `c_user` VALUES (1, 'admin', '$2a$10$f/kADD4iB7fotPTNcSzQPebfpgckxgCJaYeHMcF4a0aFavaBPdo82', '210006540@qq.com', '2019-01-22 18:59:18.162');
-INSERT INTO `c_user` VALUES (2, 'system', '$2a$10$azEkFMR8gZ1hT5O4mGaJTOsWMU2Zgkt1AkxPauFr4qM9d3rulZb56', '906163423@qq.com', '2019-01-22 19:04:57.471');
-INSERT INTO `c_user` VALUES (3, 'admin1', '$2a$10$M5v4RW15rj9m5oLkFhJCKuG1MJp6Ip7tIHi5sMiRGr3.l1qdOBzxm', '13906414017', '2019-01-30 13:17:04.000');
+INSERT INTO `c_user` VALUES (1, 'admin', '$2a$10$f/kADD4iB7fotPTNcSzQPebfpgckxgCJaYeHMcF4a0aFavaBPdo82', '000000000@qq.com', '2019-01-22 18:59:18.162');
+INSERT INTO `c_user` VALUES (2, 'system', '$2a$10$azEkFMR8gZ1hT5O4mGaJTOsWMU2Zgkt1AkxPauFr4qM9d3rulZb56', '000000000@qq.com', '2019-01-22 19:04:57.471');
+INSERT INTO `c_user` VALUES (3, 'admin1', '$2a$10$M5v4RW15rj9m5oLkFhJCKuG1MJp6Ip7tIHi5sMiRGr3.l1qdOBzxm', '13800000000', '2019-01-30 13:17:04.000');
 
 
