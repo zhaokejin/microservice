@@ -3,7 +3,7 @@ package com.cicoding.commons;
 /****
  * session key list
  * 
- * @author zhaokejin
+ * @author cicoding.cn
  *
  */
 public class SessionCommons {
