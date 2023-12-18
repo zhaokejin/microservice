@@ -10,7 +10,7 @@ import java.util.*;
 /****
  * 会员
  * 
- * @author zhaokejin
+ * @author cicoding.cn
  *
  */
 @Data
