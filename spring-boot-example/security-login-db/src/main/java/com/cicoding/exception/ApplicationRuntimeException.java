@@ -3,7 +3,7 @@ package com.cicoding.exception;
 /***
  * 程序-运行时错误
  *
- * @author zhaokejin
+ * @author cicoding.cn
  *
  */
 public class ApplicationRuntimeException extends RuntimeException {
