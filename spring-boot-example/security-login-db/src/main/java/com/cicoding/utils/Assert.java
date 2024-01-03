@@ -10,7 +10,7 @@ import java.util.Map;
 /***
  * 断言工具
  * 
- * @author zhaokejin
+ * @author cicoding.cn
  *
  */
 public class Assert {
