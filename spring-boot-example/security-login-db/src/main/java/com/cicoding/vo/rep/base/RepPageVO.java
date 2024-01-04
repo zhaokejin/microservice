@@ -3,7 +3,7 @@ package com.cicoding.vo.rep.base;
 /***
  * 分页DTO
  *
- * @author zhaokejin
+ * @author cicoding.cn
  *
  * @param <T>
  */
