@@ -11,7 +11,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 /***
  * 自定义安全认证
  * 
- * @author zhaokejin
+ * @author cicoding.cn
  *
  */
 public class CustomAuthenticationProvider implements AuthenticationProvider {
