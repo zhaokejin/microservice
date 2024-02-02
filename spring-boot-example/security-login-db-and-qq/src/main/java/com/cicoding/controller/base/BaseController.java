@@ -22,7 +22,7 @@ import java.io.IOException;
 
 /***
  * controller base
- * @author zhaokejin
+ * @author cicoding.cn
  *
  */
 public class BaseController {
