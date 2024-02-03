@@ -3,7 +3,7 @@ package com.cicoding.vo.rep.base;
 /***
  * 接口返回信息wrapper
  * 
- * @author zhaokejin
+ * @author cicoding.cn
  *
  * @param <T>
  */
