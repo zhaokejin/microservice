@@ -1,7 +1,7 @@
 package cn.cicoding.entity;
 
 /**
- * @author zhaokejin
+ * @author cicoding.cn
  * @description
  * @date 2020/2/3
  */
