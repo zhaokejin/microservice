@@ -3,7 +3,7 @@ package com.cicoding.vo.rep.base;
 /***
  * 返回代码
  *
- * @author zhaokejin
+ * @author cicoding.cn
  *
  */
 public enum ResultCode {
