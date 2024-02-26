@@ -1,0 +1,27 @@
+# 应用名称
+spring:
+  application:
+    name: springboot-canal-redis
+  redis:
+    host: 127.0.0.1
+    password:
+    port: 6379
+    database: 0
+
+# 应用服务 WEB 访问端口
+server:
+  port: 8080
+
+# canal服务端地址
+canal:
+  server: 192.168.29.241:11111
+  # 实例名，与deployer中配置的保持统一 ,复制example实例配置
+#  cp -R example redis
+#  cd redis
+#  vim instance.properties
+  destination: redis
+
+# 设置canal消息日志打印级别
+logging:
+  level:
+    top.javatool.canal.client: warn
