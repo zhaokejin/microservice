@@ -42,7 +42,7 @@ public class MailController {
         // 发件人邮箱
         message.setFrom(this.mailProperties.getUsername());
         // 收信人邮箱
-        message.setTo("210006540@qq.com");
+        message.setTo("000000000@qq.com");
         // 邮件主题
         message.setSubject("简单邮件测试");
         // 邮件内容
@@ -63,7 +63,7 @@ public class MailController {
         MimeMessageHelper messageHelper = new MimeMessageHelper(message);
 
         messageHelper.setFrom(this.mailProperties.getUsername());
-        messageHelper.setTo("210006540@qq.com");
+        messageHelper.setTo("xxxxxxx@qq.com");
         messageHelper.setSubject("HTML内容邮件测试");
         // 第二个参数表示是否html，设为true
         messageHelper.setText("<h1>HTML内容..</h1>", true);
@@ -85,7 +85,7 @@ public class MailController {
         MimeMessageHelper messageHelper = new MimeMessageHelper(message, true);
 
         messageHelper.setFrom(this.mailProperties.getUsername());
-        messageHelper.setTo("210006540@qq.com");
+        messageHelper.setTo("00000000@qq.com");
         messageHelper.setSubject("带附件的邮件测试");
         // 第二个参数表示是否html，设为true
         messageHelper.setText("<h1>HTML内容..</h1>", true);
@@ -108,7 +108,7 @@ public class MailController {
         // 第二个参数表示是否开启multipart模式
         MimeMessageHelper messageHelper = new MimeMessageHelper(message, true);
         messageHelper.setFrom(this.mailProperties.getUsername());
-        messageHelper.setTo("210006540@qq.com");
+        messageHelper.setTo("000000000@qq.com");
         messageHelper.setSubject("内联附件的邮件测试");
         // 第二个参数表示是否html，设为true
         messageHelper.setText("<h1>HTML内容..<img src=\"cid:attach\"/></h1>", true);
@@ -130,7 +130,7 @@ public class MailController {
         // 第二个参数表示是否开启multipart模式
         MimeMessageHelper messageHelper = new MimeMessageHelper(message, true);
         messageHelper.setFrom(this.mailProperties.getUsername());
-        messageHelper.setTo("210006540@qq.com");
+        messageHelper.setTo("000000000@qq.com");
         messageHelper.setSubject("基于freemarker模板的邮件测试");
 
         Map<String, Object> model = new HashMap<>();
