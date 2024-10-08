@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.demo</groupId>
     <artifactId>springboot-mongo-upload</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <name>springboot-mongo-upload</name>
     <description>使用Mongodb作为文件上传服务器</description>
 
