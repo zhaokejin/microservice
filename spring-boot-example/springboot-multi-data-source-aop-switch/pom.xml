@@ -6,7 +6,7 @@
 
     <groupId>com.springboot</groupId>
     <artifactId>springboot-multi-data-source-aop-switch</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <properties>
