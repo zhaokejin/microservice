@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * Created by Donghua.Chen on 2018/7/25.
+ * @author cicoding.cn
  */
 @RestController
 @RequestMapping("/user")
@@ -24,7 +24,7 @@ public class UserController {
             String password,
             @RequestParam(value = "phone", required = false)
             String phone
-    ){
+    ) {
         UserDomain userDomain = new UserDomain();
         userDomain.setUserName(userName);
         userDomain.setPassword(password);
@@ -34,7 +34,7 @@ public class UserController {
     }
 
     @DeleteMapping("")
-    public ResponseEntity deleteUser(@RequestParam(value = "userId", required = true) Integer userId){
+    public ResponseEntity deleteUser(@RequestParam(value = "userId", required = true) Integer userId) {
 
         userService.deleteUserById(userId);
         return ResponseEntity.ok("删除成功");
@@ -43,14 +43,14 @@ public class UserController {
     @PutMapping("")
     public ResponseEntity updateUser(
             @RequestParam(value = "userId", required = true)
-                    Integer userId,
+            Integer userId,
             @RequestParam(value = "userName", required = false)
-                    String userName,
+            String userName,
             @RequestParam(value = "password", required = false)
-                    String password,
+            String password,
             @RequestParam(value = "phone", required = false)
-                    String phone
-    ){
+            String phone
+    ) {
         UserDomain userDomain = new UserDomain();
         userDomain.setUserId(userId);
         userDomain.setUserName(userName);
@@ -61,7 +61,7 @@ public class UserController {
     }
 
     @GetMapping("")
-    public ResponseEntity getUsers(){
+    public ResponseEntity getUsers() {
         return ResponseEntity.ok(userService.selectUsers());
     }
 
