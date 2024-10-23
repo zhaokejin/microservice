@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 /**
- * Created by Donghua.Chen on 2018/7/25.
+ * @author cicoding.cn
  */
 @Mapper
 public interface UserDao {
