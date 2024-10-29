@@ -22,44 +22,63 @@ public class UserController {
     private UserService userService;
 
     /**
-     * 查询全部
+     * Mapper分页查询
+     *
      * @param page
      * @param size
      * @return
      */
-    @RequestMapping("/listAll")
-    public Object listAll(@RequestParam(value = "page",defaultValue = "1")int page,
-                          @RequestParam(value = "size",defaultValue = "10")int size){
-        return userService.listAll(page, size);
+    @RequestMapping("/selectPageMapper")
+    public Object selectPageMapper(@RequestParam(value = "page", defaultValue = "1") int page,
+                                   @RequestParam(value = "size", defaultValue = "10") int size) {
+        return userService.selectPageMapper(page, size);
+    }
+
+    /**
+     * 自定义sql语句使用mp分页查询
+     *
+     * @param pageNum
+     * @param size
+     * @param userName
+     * @return
+     */
+    @RequestMapping("/selectPageCustom")
+    public Object selectPage(@RequestParam(value = "pageNum", defaultValue = "1") int pageNum,
+                             @RequestParam(value = "size", defaultValue = "10") int size,
+                             @RequestParam(value = "userName") String userName) {
+        return userService.selectPageCustom(pageNum, size, userName);
     }
 
     /**
      * 添加数据
+     *
      * @param user
      * @return
      */
     @RequestMapping("/insert")
-    public int insert (User user){
+    public int insert(User user) {
         return userService.insert(user);
     }
 
     /**
      * 删除
+     *
      * @param userId
      * @return
      */
     @RequestMapping("/remove")
-    public int remove(Integer userId){
+    public int remove(Integer userId) {
         return userService.remove(userId);
     }
 
     /**
      * 修改
+     *
      * @param user
      * @return
      */
     @RequestMapping("/update")
-    public int update(User user){
+    public int update(User user) {
         return userService.update(user);
     }
 

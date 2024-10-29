@@ -11,7 +11,13 @@ import cn.cicoding.mybatisplus.bean.User;
  */
 public interface UserService {
 
-    Object listAll(int page, int size);
+    /**
+     * Mapper分页查询
+     * @param page
+     * @param size
+     * @return
+     */
+    Object selectPageMapper(int page, int size);
 
     int insert(User user);
 
@@ -19,4 +25,12 @@ public interface UserService {
 
     int update(User user);
 
+    /**
+     * 自定义sql语句使用mp分页查询
+     * @param pageNum
+     * @param size
+     * @param userName
+     * @return
+     */
+    Object selectPageCustom(int pageNum, int size, String userName);
 }
