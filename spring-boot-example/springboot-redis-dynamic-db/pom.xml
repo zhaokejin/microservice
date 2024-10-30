@@ -14,7 +14,7 @@
 
     <groupId>cn.cicoding</groupId>
     <artifactId>springboot-redis-dynamic-db</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.0-SNAPSHOT</version>
     <name>springboot-redis-dynamic-db</name>
 
 
