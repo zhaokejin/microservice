@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
  * <p>
  * 封装了对象和字符串的存,取,删除,设置过期时间操作. 所有操作可以指定数据库索引. 存,取可以设置过期时间. 没有设置默认过期时间,存值时尽量设置过期时间
  *
- * @author zhaokejin
+ * @author cicoding.cn
  * @version 创建时间：2021年09月05日 下午3:31:00
  */
 @Component
