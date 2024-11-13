@@ -14,7 +14,7 @@ __Version__ : 1.9.0.RELEASE
 === Contact information
 [%hardbreaks]
 __Contact__ : didi
-__Contact Email__ : 210006540@qq.com
+__Contact Email__ : 000000000@qq.com
 
 
 === License information
