@@ -1,9 +1,11 @@
 package cn.cicoding.springbootswagger2docspringforall;
 
-import com.spring4all.swagger.EnableSwagger2Doc;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-@EnableSwagger2Doc
+
+/**
+ * https://github.com/SpringForAll/spring-boot-starter-swagger
+ */
 @SpringBootApplication
 public class SpringbootSwagger2DocSpringforallApplication {
 

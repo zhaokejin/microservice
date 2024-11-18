@@ -12,7 +12,7 @@ Starter for swagger 2.x
 
 ### Contact information
 *Contact* : didi  
-*Contact Email* : 210006540@qq.com
+*Contact Email* : 000000000@qq.com
 
 
 ### License information
