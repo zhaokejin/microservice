@@ -11,7 +11,7 @@ _Version_ : 1.9.0.RELEASE
 
 h3. Contact information
 _Contact_ : didi\\ 
-_Contact Email_ : 210006540@qq.com
+_Contact Email_ : 000000000@qq.com
 
 
 h3. License information
