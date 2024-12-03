@@ -1,6 +1,5 @@
 package cn.cicoding.springbootswaggerinterfacesort;
 
-import com.spring4all.swagger.EnableSwagger2Doc;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.boot.SpringApplication;
@@ -9,8 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-@EnableSwagger2Doc
+/**
+ * https://github.com/SpringForAll/spring-boot-starter-swagger
+ */
 @SpringBootApplication
 public class SpringbootSwaggerInterfaceSortApplication {
 
