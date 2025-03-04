@@ -1,0 +1,11 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: microservice-alibaba-current-limiting
+
+  # sentinel dashboard
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8080
