@@ -1,5 +1,0 @@
-#控制日志显示格式。由于属性值不能以%开头，
-#故前面的Level-就是普通字符串，为使其不报错
-logging:
-  pattern:
-    console: level-%level %d %msg%n
