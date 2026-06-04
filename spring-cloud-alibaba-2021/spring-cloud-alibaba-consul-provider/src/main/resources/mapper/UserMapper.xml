@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.cicoding.dao.UserDao">
+    <sql id="BASE_TABLE">
+        t_user
+    </sql>
+
+    <sql id="BASE_COLUMN">
+        id,userName,password,phone,createTime
+    </sql>
+
+    <insert id="insert" parameterType="cn.cicoding.model.UserDomain">
+        INSERT INTO
+        <include refid="BASE_TABLE"/>
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            userName,password,
+            <if test="phone != null">
+                phone,
+            </if>
+        </trim>
+        <trim prefix="VALUES(" suffix=")" suffixOverrides=",">
+            #{userName, jdbcType=VARCHAR},#{password, jdbcType=VARCHAR},
+            <if test="phone != null">
+                #{phone, jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <delete id="deleteUserById">
+        DELETE FROM
+        <include refid="BASE_TABLE"/>
+        WHERE
+        id = #{id, jdbcType=INTEGER}
+    </delete>
+    <!-- 更新用户信息，为空的字段不进行置空 -->
+    <update id="updateUser" parameterType="cn.cicoding.model.UserDomain">
+        UPDATE
+        <include refid="BASE_TABLE"/>
+        <set>
+            <if test="userName != null">
+                userName = #{userName, jdbcType=VARCHAR},
+            </if>
+            <if test="password != null">
+                password = #{password, jdbcType=VARCHAR},
+            </if>
+            <if test="phone != null">
+                phone = #{phone, jdbcType=VARCHAR},
+            </if>
+        </set>
+        <where>
+            id = #{id, jdbcType=INTEGER}
+        </where>
+    </update>
+
+    <select id="selectUsers" resultType="cn.cicoding.model.UserDomain">
+        SELECT
+        <include refid="BASE_COLUMN"/>
+        FROM
+        <include refid="BASE_TABLE"/>
+    </select>
+
+    <select id="findById" resultType="cn.cicoding.model.UserDomain">
+        SELECT
+        <include refid="BASE_COLUMN"/>
+        FROM
+        <include refid="BASE_TABLE"/>
+        where id = #{id}
+    </select>
+
+
+</mapper>
