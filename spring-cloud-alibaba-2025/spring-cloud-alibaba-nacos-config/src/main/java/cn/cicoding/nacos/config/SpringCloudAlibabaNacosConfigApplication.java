@@ -3,8 +3,10 @@ package cn.cicoding.nacos.config;
 import cn.cicoding.nacos.config.loader.NacosRestConfigInitializer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
+@EnableScheduling   // enables the @Scheduled poll loop in NacosRestConfigRefresher
 public class SpringCloudAlibabaNacosConfigApplication {
 
     public static void main(String[] args) {
