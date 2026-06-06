@@ -1,0 +1,38 @@
+server:
+  port: 9004
+
+spring:
+  application:
+    name: spring-cloud-alibaba-multiple-config
+  config:
+    import:
+      # SCA 2025 starter requires spring.config.import; `optional:` means the
+      # app starts even if Nacos is unreachable. Actual values are delivered
+      # via NacosRestConfigInitializer (REST API, bypasses gRPC bug).
+      - optional:nacos:cicoding-provider.properties?refresh=true
+      - optional:nacos:cicoding-consumer.properties?refresh=true
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        namespace: 3d3be08a-3670-401d-80d0-ac7ddc48115d
+        group: DEFAULT_GROUP
+        file-extension: properties
+        # Clear default nacos/nacos credentials (Nacos server has NACOS_AUTH_ENABLE=false)
+        username: ""
+        password: ""
+      discovery:
+        server-addr: 127.0.0.1:8848
+        username: ""
+        password: ""
+  profiles:
+    active: dev
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
