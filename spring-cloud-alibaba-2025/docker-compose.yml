@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  nacos:
+    image: nacos/nacos-server:v2.5.0
+    container_name: nacos-standalone
+    restart: unless-stopped
+    environment:
+      - MODE=standalone
+      - NACOS_AUTH_ENABLE=false
+      - NACOS_AUTH_IDENTITY_KEY=nacos
+      - NACOS_AUTH_IDENTITY_VALUE=nacos
+      - NACOS_AUTH_TOKEN_SECRET_KEY=SecretKey012345678901234567890123456789012345678901234567890123456789
+      - JVM_XMS=256m
+      - JVM_XMX=256m
+      - JVM_XMN=128m
+    ports:
+      - "8848:8848"   # HTTP 控制台
+      - "9848:9848"   # gRPC 客户端通信（SCA 2025 Nacos Client 3.x 需要）
+      - "9849:9849"   # gRPC 服务端通信
+    volumes:
+      - nacos-data:/home/nacos/data
+      - nacos-logs:/home/nacos/logs
+
+volumes:
+  nacos-data:
+  nacos-logs:
