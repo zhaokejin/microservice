@@ -36,3 +36,11 @@ build/
 /logs/
 /nacos-server/
 /nacos-server-1.4.4.zip
+
+# SkyWalking agent (downloaded by skywalking/download-agent.*)
+/skywalking/agent/
+/skywalking/agent/skywalking-agent.jar
+/skywalking/agent/optional-plugins/
+/skywalking/agent/activations/
+/skywalking/agent/bootstrap-plugins/
+/skywalking/agent/logs/
