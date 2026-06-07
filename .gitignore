@@ -14,7 +14,7 @@ target/
 .sts4-cache
 
 ### IntelliJ IDEA ###
-spring-cloud-alibaba-2025/.idea
+.idea
 *.iws
 *.iml
 *.ipr
@@ -38,9 +38,4 @@ build/
 /nacos-server-1.4.4.zip
 
 # SkyWalking agent (downloaded by skywalking/download-agent.*)
-/skywalking/agent/
-/skywalking/agent/skywalking-agent.jar
-/skywalking/agent/optional-plugins/
-/skywalking/agent/activations/
-/skywalking/agent/bootstrap-plugins/
-/skywalking/agent/logs/
+skywalking/agent/
