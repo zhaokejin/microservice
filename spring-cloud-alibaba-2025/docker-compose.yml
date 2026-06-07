@@ -38,6 +38,23 @@ services:
       timeout: 5s
       retries: 10
 
+  # ==================== Consul 注册配置中心 ====================
+  consul:
+    image: consul:1.15
+    container_name: consul-standalone
+    restart: unless-stopped
+    command: agent -dev -client=0.0.0.0
+    ports:
+      - "8500:8500"   # HTTP API
+      - "8600:8600"   # DNS
+    volumes:
+      - consul-data:/consul/data
+    healthcheck:
+      test: ["CMD", "consul", "members"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
   # ==================== SkyWalking 链路追踪 ====================
   skywalking-oap:
     image: apache/skywalking-oap-server:10.1.0
@@ -106,3 +123,4 @@ volumes:
   nacos-data:
   nacos-logs:
   mysql-data:
+  consul-data:
