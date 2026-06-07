@@ -22,7 +22,7 @@ import java.util.Map;
 @Slf4j
 @Component
 @RocketMQMessageListener(
-        nameServer = "${spring.rocketmq.name-server}",
+        nameServer = "${rocketmq.name-server}",
         topic = "${rocketmq.topic.user-notify}",
         selectorExpression = "*",
         consumerGroup = "rocketmq-user-notify-consumer",

@@ -27,10 +27,11 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
 
-        <!-- RocketMQ Starter（SCA 内置，基于 RocketMQ 5.x） -->
+        <!-- RocketMQ Spring Boot Starter（Apache 官方，基于 RocketMQ 5.x） -->
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-rocketmq</artifactId>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-spring-boot-starter</artifactId>
+            <version>2.3.3</version>
         </dependency>
 
         <!-- Lombok -->
