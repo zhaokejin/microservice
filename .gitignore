@@ -14,7 +14,7 @@ target/
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea
+spring-cloud-alibaba-2025/.idea
 *.iws
 *.iml
 *.ipr

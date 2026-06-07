@@ -288,5 +288,5 @@ mvn clean compile
 
 ## 参考文档
 
-- [开发日志](docs/development-log.md) —— 各模块实现细节与依赖变更
-- [问题修复记录](docs/issue-fixes.md) —— 版本兼容性问题与故障排查</｜DSML｜parameter>
+- [开发日志](development-log.md) —— 各模块实现细节与依赖变更
+- [问题修复记录](issue-fixes.md) —— 版本兼容性问题与故障排查</｜DSML｜parameter>

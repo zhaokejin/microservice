@@ -56,9 +56,19 @@
 | JDK | 17+ |
 
 子模块：
-- **nacos-server**：Nacos 注册配置中心（嵌入式启动，无需下载安装包）
 - **spring-cloud-alibaba-provider**：服务提供者（用户 CRUD + MyBatis + MySQL + Nacos 注册）
+- **spring-cloud-alibaba-provider-file**：服务提供者（文件上传 + 用户 CRUD + MyBatis + MySQL + Nacos 注册）
 - **spring-cloud-alibaba-consumer-feign**：服务消费者（Feign + LoadBalancer + Nacos 注册）
+- **spring-cloud-alibaba-consumer-feign-file**：服务消费者（Feign 文件上传 + LoadBalancer + Nacos 注册）
+- **spring-cloud-alibaba-consumer-ribbon**：服务消费者（RestTemplate + LoadBalancer + Nacos 注册）
 - **spring-cloud-alibaba-gateway**：API 网关（Spring Cloud Gateway + Nacos 注册 + 跨域配置）
+- **spring-cloud-alibaba-nacos-config**：Nacos 配置中心示例（动态配置刷新）
+- **spring-cloud-alibaba-multiple-config**：多配置拉取示例（同时拉取多个 Nacos 配置文件）
+- **spring-cloud-alibaba-consul-provider**：服务提供者（Consul 注册中心 + MyBatis + MySQL）
+- **spring-boot-admin-server**：Spring Boot Admin 监控服务端（SBA 4.0.4 + Boot 4.0.6）
+- **springboot-dubbo-demo**：Dubbo + Nacos RPC 调用示例（common-api / service-provider / service-consumer）
 
-详细迁移开发指南：[DEVELOPMENT-GUIDE.md](spring-cloud-alibaba-2025/DEVELOPMENT-GUIDE.md)</｜DSML｜parameter>
+其他目录：
+- **docs/**：项目文档（开发日志、问题修复记录）
+- **skywalking/**：SkyWalking 链路追踪集成配置（Docker Compose + Java Agent）
+
