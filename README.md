@@ -26,7 +26,7 @@
 
 | Spring Cloud Alibaba | Spring Cloud | Spring Boot | Spring Framework | JDK | 推荐度 | Sentinel 对应 | RocketMQ 对应 |
 |----------------------|-------------|-------------|-----------------|-----|--------|--------------|----------------|
-| **2025.1.0.0** | 2025.1.1 | **4.0.6** | 7.0.x | 17+ | ⭐⭐⭐ 最新（Boot 4.x 线） | **1.8.8+** | **5.3.0+** |
+| **2025.1.0.0** | 2025.1.1 | **4.0.6** | 7.0.x | 17+ | ⭐⭐⭐ 最新（Boot 4.x 线） | **1.8.8+** | **5.1.4+** |
 | **2025.0.0.0** | 2025.0.2 | **3.5.14** | 6.3.x | 17+ | ⭐⭐⭐ 推荐（Boot 3.5 线，生态成熟） | **1.8.6** | **5.1.4+** |
 | 2023.0.3.4 | 2023.0.4 | 3.2.x / 3.3.x | 6.1.x | 17+ | ⭐⭐ 稳定（Bug 维护期） | 1.8.6 | 5.1.4 |
 | 2021.0.6.2 | 2021.0.9 | 2.6.x / 2.7.x | 5.3.x | 8+ | ⭐ 旧版长期维护（仅维护期必要升级） | 1.8.0+ | 4.9.x |
@@ -45,8 +45,8 @@
 | **Sentinel Dashboard** | **1.8.8** | Docker `bladex/sentinel-dashboard:1.8.8` | **↕ 配套 Client 1.8.8+** |
 | Redis | 7.2+ | `spring-boot-starter-data-redis` | Lettuce 6.x |
 | Redisson | 3.40.2+ | `redisson-spring-boot-starter:3.40.2` | Spring Data Redis 3.4+ |
-| **RocketMQ Broker** | **5.3.0+** | `spring-cloud-starter-alibaba-rocketmq` | **↕ 配套 RocketMQ Dashboard + Spring Cloud Stream 4.x** |
-| **RocketMQ Dashboard** | **latest** | Docker `apacherocketmq/rocketmq-dashboard` | **↕ 配套 Broker 5.3.0+** |
+| **RocketMQ Starter** | **2.3.3** | `org.apache.rocketmq:rocketmq-spring-boot-starter` | **↕ 配套 RocketMQ Dashboard + Broker 5.1.4** |
+| **RocketMQ Dashboard** | **latest** | Docker `apacherocketmq/rocketmq-dashboard` | **↕ 配套 Broker 5.1.4** |
 
 #### 组合 B：SCA 2025.0.0.0 + Boot 3.5.14（推荐线，存量项目首选）
 
@@ -58,7 +58,7 @@
 | **Sentinel Dashboard** | **1.8.6** | Docker `bladex/sentinel-dashboard:1.8.6` | **↕ 配套 Client 1.8.6** |
 | Redis | 7.2+ | `spring-boot-starter-data-redis` | Lettuce 6.3.x |
 | Redisson | 3.32.x | `redisson-spring-boot-starter:3.32.0` | Spring Data Redis 3.3+ |
-| **RocketMQ Broker** | **5.1.4+** | `spring-cloud-starter-alibaba-rocketmq` | **↕ 配套 Dashboard + Spring Cloud Stream 3.x** |
+| **RocketMQ Starter** | **2.3.x** | `org.apache.rocketmq:rocketmq-spring-boot-starter` | **↕ 配套 Dashboard + Broker 5.1.4+** |
 | **RocketMQ Dashboard** | **stable** | Docker `apacherocketmq/rocketmq-dashboard` | **↕ 配套 Broker 5.1.4+** |
 
 #### 组合 C：SCA 2023.0.3.4 + Boot 3.2/3.3（Bug 维护期）
@@ -70,22 +70,22 @@
 | **Sentinel Dashboard** | **1.8.6** | Docker `bladex/sentinel-dashboard:1.8.6` | **↕ 配套 Client 1.8.6** |
 | Redis | 7.0+ | `spring-boot-starter-data-redis` | Lettuce 6.2 |
 | Redisson | 3.27.x | `redisson-spring-boot-starter:3.27.2` | Spring Data Redis 3.2 |
-| **RocketMQ Broker** | **5.1.4** | `spring-cloud-starter-alibaba-rocketmq` | **↕ 配套 Dashboard + Stream Binder** |
+| **RocketMQ Starter** | **2.3.x** | `org.apache.rocketmq:rocketmq-spring-boot-starter` | **↕ 配套 Dashboard + Broker 5.1.4** |
 | **RocketMQ Dashboard** | **stable** | Docker `apacherocketmq/rocketmq-dashboard` | **↕ 配套 Broker 5.1.4** |
 
 ### 组件兼容性速查
 
 ```
-SCA 2025.1.x  ──>  Nacos 3.1.x  ──>  Sentinel 1.8.8+  ──>  RocketMQ 5.3.0+
+SCA 2025.1.x  ──>  Nacos 3.1.x  ──>  Sentinel 1.8.8+  ──>  RocketMQ 5.1.4+
    │                  │                  │                    │
-   │                  │                  │                    ├─ Spring Cloud Stream 4.x
+   │                  │                  │                    ├─ rocketmq-spring-boot-starter 2.3.3
    │                  │                  └─ Sentinel Dashboard 1.8.8
    │                  └─ Nacos Server 2.5.0+（需 gRPC 9848）
    └─ Spring Cloud 2025.1.1 + Spring Boot 4.0.6
 
 SCA 2025.0.x  ──>  Nacos 2.5.x  ──>  Sentinel 1.8.6   ──>  RocketMQ 5.1.4+
    │                  │                  │                    │
-   │                  │                  │                    └─ Spring Cloud Stream 3.x
+   │                  │                  │                    └─ rocketmq-spring-boot-starter 2.3.x
    │                  │                  └─ Sentinel Dashboard 1.8.6
    │                  └─ Nacos Server 2.4.6 LTS
    └─ Spring Cloud 2025.0.2 + Spring Boot 3.5.14
@@ -103,7 +103,7 @@ SCA 2025.0.x  ──>  Nacos 2.5.x  ──>  Sentinel 1.8.6   ──>  RocketMQ 
 - **SCA 2025.1.0.0**：移除 bootstrap 配置，改用 `spring.config.import=nacos:...`
 - **Boot 4.0**：底层升级 Spring Framework 7.0、Spring Security 7.0、Tomcat 11、Hibernate 7.2
 - **2025.0.x 和 2025.1.x** 是两条并行维护线，分别对应 Boot 3.5.x 和 Boot 4.0.x
-- **SCA 2025.x**：内置 RocketMQ 5.x，不再单独维护 4.x 兼容层
+- **SCA 2025.x**：推荐使用 `rocketmq-spring-boot-starter`，SCA 2025 BOM 不再包含原 `spring-cloud-starter-alibaba-rocketmq`
 
 ---
 
@@ -132,7 +132,7 @@ SCA 2025.0.x  ──>  Nacos 2.5.x  ──>  Sentinel 1.8.6   ──>  RocketMQ 
 | **spring-boot-admin-server** | 8888 | Spring Boot Admin 监控服务端（SBA 4.0.4 + Boot 4.0.6） |
 | **springboot-dubbo-demo** | — | Dubbo + Nacos RPC 调用示例（common-api / service-provider / service-consumer） |
 
-### 第六阶段：生产必备中间件（✅ 实施中）
+### 第六阶段：生产必备中间件（✅ 已完成）
 
 | 模块 | 端口 | 说明 |
 |------|------|------|

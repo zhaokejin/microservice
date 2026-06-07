@@ -2,7 +2,7 @@
 
 > 项目：Spring Cloud Alibaba 2025 微服务示例
 > 创建日期：2025-06-07
-> 状态：规划中
+> 状态：第六阶段已完成，第七阶段规划中
 
 ---
 
@@ -18,10 +18,10 @@
 ├── 第二阶段：核心微服务开发（04-07）  ← Provider + Feign + RestTemplate + Gateway
 ├── 第三阶段：配置与高级特性（08-10）  ← Nacos Config + 多配置 + 文件上传
 ├── 第四阶段：运维与监控（11-12）      ← SBA + Consul
-└── 第五阶段：进阶集成（13-15）        ← Dubbo + SkyWalking + Docker Compose
+├── 第五阶段：进阶集成（13-15）        ← Dubbo + SkyWalking + Docker Compose
+└── 第六阶段：生产必备中间件（16-18）  ← Sentinel + Redis + RocketMQ      ✅ 已完成
 
 规划中 📋
-├── 第六阶段：生产必备中间件（16-18）  ← Sentinel + Redis + RocketMQ    🥇 最高优先级
 ├── 第七阶段：架构进阶能力（19-21）    ← Seata + OAuth2 + OpenTelemetry 🥈 高优先级
 └── 第八阶段：大厂级完善（22-27）      ← 调度 + 指标 + 日志 + 网格 + 混沌  🥉 中优先级
 ```
@@ -47,12 +47,12 @@
 | **学习要点** | 流控模式（直接/关联/链路）、流控效果（快速失败/Warm Up/排队等待）、降级策略（RT/异常比例/异常数）、`@SentinelResource` 注解、Fallback 与 BlockHandler 的区别 |
 
 **开发任务**：
-- [ ] Docker Compose 添加 Sentinel Dashboard
-- [ ] Gateway 模块集成 Sentinel 网关限流
-- [ ] Consumer-Feign 模块集成 Sentinel 资源保护
-- [ ] Provider 模块添加 Sentinel 热点参数限流
-- [ ] Sentinel 规则 Nacos 持久化
-- [ ] 编写教程文档 `16.Sentinel熔断限流.md`
+- [x] Docker Compose 添加 Sentinel Dashboard
+- [x] Gateway 模块集成 Sentinel 网关限流
+- [x] Consumer-Feign 模块集成 Sentinel 资源保护
+- [x] Provider 模块添加 Sentinel 热点参数限流
+- [x] Sentinel 规则 Nacos 持久化
+- [x] 编写教程文档 `16.Sentinel熔断限流.md`
 
 ---
 
@@ -69,12 +69,12 @@
 | **学习要点** | Spring Cache 抽象、Redis 五种数据结构使用场景、缓存更新策略（Cache Aside/Read Through/Write Through）、Redisson 看门狗机制、Redis Cluster 分片原理 |
 
 **开发任务**：
-- [ ] Docker Compose 添加 Redis + RedisInsight
-- [ ] Provider 模块引入 `spring-boot-starter-data-redis` + `spring-boot-starter-cache`
-- [ ] 用户查询接口接入 `@Cacheable` 缓存
-- [ ] 用户修改/删除接口接入 `@CacheEvict` 失效
-- [ ] Redisson 分布式锁实现缓存击穿保护
-- [ ] 编写教程文档 `17.Redis分布式缓存.md`
+- [x] Docker Compose 添加 Redis + RedisInsight
+- [x] Provider 模块引入 `spring-boot-starter-data-redis` + `spring-boot-starter-cache`
+- [x] 用户查询接口接入 `@Cacheable` 缓存
+- [x] 用户修改/删除接口接入 `@CacheEvict` 失效
+- [x] Redisson 分布式锁实现缓存击穿保护
+- [x] 编写教程文档 `17.Redis分布式缓存.md`
 
 ---
 
@@ -91,13 +91,13 @@
 | **学习要点** | 消息模型（Topic/Tag/Group）、消费模式（集群/广播）、消息过滤、消费重试机制、事务消息原理（半消息 + 回查）、Spring Cloud Stream Binder 抽象 |
 
 **开发任务**：
-- [ ] Docker Compose 添加 RocketMQ + Dashboard
-- [ ] 新建 `spring-cloud-alibaba-rocketmq` 模块
-- [ ] 普通消息：用户注册异步发欢迎通知
-- [ ] 顺序消息：订单状态流转
-- [ ] 延迟消息：订单超时取消
-- [ ] Spring Cloud Stream 函数式编程集成
-- [ ] 编写教程文档 `18.RocketMQ消息队列.md`
+- [x] Docker Compose 添加 RocketMQ + Dashboard
+- [x] 新建 `spring-cloud-alibaba-rocketmq` 模块
+- [x] 普通消息：用户注册异步发欢迎通知
+- [x] 顺序消息：订单状态流转
+- [x] 延迟消息：订单超时取消
+- [x] 改用 `rocketmq-spring-boot-starter:2.3.3`（SCA 2025 BOM 已移除原 starter）
+- [x] 编写教程文档 `18.RocketMQ消息队列.md`
 
 ---
 
@@ -335,9 +335,9 @@ spring-cloud-alibaba-2025/
 
 | 序号 | 教程 | 状态 | 开始日期 | 完成日期 | 备注 |
 |------|------|------|---------|---------|------|
-| 16 | Sentinel 熔断限流 | ⬜ 待开始 | — | — | |
-| 17 | Redis 分布式缓存 | ⬜ 待开始 | — | — | |
-| 18 | RocketMQ 消息队列 | ⬜ 待开始 | — | — | |
+| 16 | Sentinel 熔断限流 | ✅ 已完成 | 2026-06-07 | 2026-06-07 | Gateway + Consumer + Provider 三层接入 |
+| 17 | Redis 分布式缓存 | ✅ 已完成 | 2026-06-07 | 2026-06-07 | Spring Cache + Redisson 分布式锁 |
+| 18 | RocketMQ 消息队列 | ✅ 已完成 | 2026-06-07 | 2026-06-07 | rocketmq-spring-boot-starter 2.3.3（SCA 2025 BOM 无此项）|
 | 19 | Seata 分布式事务 | ⬜ 待开始 | — | — | |
 | 20 | OAuth2 统一认证 | ⬜ 待开始 | — | — | |
 | 21 | OpenTelemetry 可观测 | ⬜ 待开始 | — | — | |
