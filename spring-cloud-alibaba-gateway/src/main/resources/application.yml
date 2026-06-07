@@ -1,5 +1,5 @@
 server:
-  port: 7000
+  port: 9999
 
 spring:
   application:
@@ -22,6 +22,32 @@ spring:
             - Path=/api/user/**
           filters:
             - StripPrefix=1
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8858
+        port: 8719
+      # 网关限流规则
+      scg:
+        fallback:
+          mode: response
+          response-status: 429
+          response-body: '{"code":429,"msg":"请求过于频繁，请稍后再试"}'
+      # 规则持久化到 Nacos
+      datasource:
+        gw-flow:
+          nacos:
+            server-addr: 127.0.0.1:8848
+            data-id: ${spring.application.name}-gw-flow-rules
+            group-id: SENTINEL_GROUP
+            data-type: json
+            rule-type: gw-flow
+        gw-api-group:
+          nacos:
+            server-addr: 127.0.0.1:8848
+            data-id: ${spring.application.name}-gw-api-group-rules
+            group-id: SENTINEL_GROUP
+            data-type: json
+            rule-type: gw-api-group
 
 management:
   endpoints:
