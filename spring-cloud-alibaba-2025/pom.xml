@@ -25,9 +25,11 @@
         <module>spring-cloud-alibaba-provider-file</module>
         <module>spring-cloud-alibaba-consumer-feign</module>
         <module>spring-cloud-alibaba-consumer-feign-file</module>
+        <module>spring-cloud-alibaba-consumer-ribbon</module>
         <module>spring-cloud-alibaba-gateway</module>
         <module>spring-cloud-alibaba-nacos-config</module>
         <module>spring-cloud-alibaba-multiple-config</module>
+        <module>spring-cloud-alibaba-consul-provider</module>
         <module>spring-boot-admin-server</module>
         <module>springboot-dubbo-demo</module>
     </modules>
