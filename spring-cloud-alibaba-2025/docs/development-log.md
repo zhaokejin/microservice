@@ -1,8 +1,6 @@
 # 开发日志
 
-> 项目：Spring Cloud Alibaba 2025 微服务迁移
-> 日期：2026-06-06
-> 从 `spring-cloud-alibaba-2021` 迁移到新版技术栈（Boot 4.0.6 / Cloud 2025.1.1 / SCA 2025.1.0.0 / JDK 17）
+> 项目：Spring Cloud Alibaba 2025 微服务项目
 
 ---
 
