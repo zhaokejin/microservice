@@ -46,8 +46,6 @@
 
 ## 当前项目模块
 
-### spring-cloud-alibaba-2025
-
 | 版本 | 值 |
 |------|-----|
 | Spring Boot | 4.0.6 |
