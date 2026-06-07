@@ -50,6 +50,33 @@
 | [14](./14.SkyWalking链路追踪集成.md) | SkyWalking 链路追踪 | Java Agent 无侵入、拓扑图、性能监控 |
 | [15](./15.DockerCompose一键部署.md) | Docker Compose 部署 | Dockerfile 多阶段构建、集群编排 |
 
+### 第六阶段：生产必备中间件（16-18）🥇
+
+| 序号 | 教程 | 核心内容 |
+|------|------|---------|
+| 16 | Sentinel 熔断限流 | QPS 限流、熔断降级、热点参数限流、Nacos 规则持久化 |
+| 17 | Redis 分布式缓存 | Spring Cache、缓存穿透/击穿/雪崩、Redisson 分布式锁 |
+| 18 | RocketMQ 消息队列 | 普通/顺序/延迟/事务消息、Spring Cloud Stream |
+
+### 第七阶段：架构进阶能力（19-21）🥈
+
+| 序号 | 教程 | 核心内容 |
+|------|------|---------|
+| 19 | Seata 分布式事务 | AT 模式无侵入、TCC 手动补偿、全局事务监控 |
+| 20 | Spring Security OAuth2 统一认证 | 授权服务器、JWT 令牌、Gateway 全局鉴权、RBAC |
+| 21 | OpenTelemetry 可观测标准 | OTLP 协议、Traces/Metrics/Logs 三支柱、与 SkyWalking 共存 |
+
+### 第八阶段：大厂级完善（22-27）🥉
+
+| 序号 | 教程 | 核心内容 |
+|------|------|---------|
+| 22 | XXL-Job 分布式调度 | 分片广播、失败重试、动态 Cron、GLUE 模式 |
+| 23 | Prometheus + Grafana 指标监控 | Micrometer、PromQL、Grafana Dashboard、AlertManager 告警 |
+| 24 | ELK 日志中心 | Filebeat 采集、Elasticsearch 检索、Kibana 可视化 |
+| 25 | 服务网格入门 | Cilium eBPF、Hubble 可观测、Istio Ambient Mesh |
+| 26 | 下一代 API 网关 | Higress + Envoy + Wasm 插件、AI 网关能力 |
+| 27 | ChaosBlade 混沌工程 | 故障注入演练、验证 Sentinel/Seata 韧性 |
+
 ---
 
 ## 🚀 快速开始
@@ -98,5 +125,6 @@ curl http://localhost:9000/user/1
 
 ## 📝 其他文档
 
+- [开发路线图](../development-roadmap.md) —— 中间件扩展规划与执行记录
 - [开发日志](../development-log.md)
 - [问题修复记录](../issue-fixes.md)

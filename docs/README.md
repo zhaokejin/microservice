@@ -288,5 +288,6 @@ mvn clean compile
 
 ## 参考文档
 
+- [开发路线图](development-roadmap.md) —— 中间件扩展规划（第六～八阶段）
 - [开发日志](development-log.md) —— 各模块实现细节与依赖变更
 - [问题修复记录](issue-fixes.md) —— 版本兼容性问题与故障排查</｜DSML｜parameter>
