@@ -21,6 +21,28 @@ spring:
         server-addr: 127.0.0.1:8848
         username: nacos
         password: nacos
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8858
+        port: 8721
+      eager: true
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      password: redis123
+      timeout: 3000ms
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+  cache:
+    type: redis
+    redis:
+      time-to-live: 600000   # 10分钟过期
+      cache-null-values: true # 缓存空值防穿透
+      key-prefix: "sca:"     # key 前缀
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml

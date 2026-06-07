@@ -1,3 +1,5 @@
+name: spring-cloud-alibaba-2025
+
 services:
   nacos:
     image: nacos/nacos-server:v2.5.0
@@ -86,6 +88,85 @@ services:
     ports:
       - "8080:8080"    # Web 控制台
 
+  # ==================== Sentinel 流量防卫兵 ====================
+  sentinel:
+    build:
+      context: ./docker/sentinel
+      dockerfile: Dockerfile
+    container_name: sentinel-dashboard
+    restart: unless-stopped
+    environment:
+      - SERVER_PORT=8858
+      - JAVA_OPTS=-Xms256m -Xmx256m
+    ports:
+      - "8858:8858"   # Sentinel Dashboard 控制台
+
+  # ==================== Redis 缓存 ====================
+  redis:
+    image: redis:7-alpine
+    container_name: redis-standalone
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    command: redis-server --appendonly yes --requirepass redis123
+
+  redisinsight:
+    image: redis/redisinsight:latest
+    container_name: redisinsight
+    restart: unless-stopped
+    ports:
+      - "5540:5540"
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  # ==================== RocketMQ 消息队列 ====================
+  # 第六阶段：RocketMQ 5.1.4 开发环境
+  # 注：Docker Desktop Windows 下不挂 volumes（避免 NPE），开发环境无持久化
+  rocketmq-nameserver:
+    image: apache/rocketmq:5.1.4
+    container_name: rocketmq-nameserver
+    restart: unless-stopped
+    command: ./mqnamesrv
+    ports:
+      - "9876:9876"
+    environment:
+      - JAVA_OPT_EXT=-Xms256m -Xmx256m
+
+  rocketmq-broker:
+    image: apache/rocketmq:5.1.4
+    container_name: rocketmq-broker
+    restart: unless-stopped
+    command: ./mqbroker -n rocketmq-nameserver:9876
+    depends_on:
+      rocketmq-nameserver:
+        condition: service_started
+    ports:
+      - "10909:10909"
+      - "10911:10911"
+      - "10912:10912"
+    environment:
+      - JAVA_OPT_EXT=-Xms512m -Xmx512m
+
+  rocketmq-dashboard:
+    image: apacherocketmq/rocketmq-dashboard:latest
+    container_name: rocketmq-dashboard
+    restart: unless-stopped
+    depends_on:
+      rocketmq-nameserver:
+        condition: service_started
+    environment:
+      - JAVA_OPTS=-Xmx256m -Drocketmq.config.namesrvAddr=rocketmq-nameserver:9876 -Dserver.port=8080
+    ports:
+      - "8180:8080"
+
   # ==================== 微服务 ====================
   provider:
     build:
@@ -124,3 +205,4 @@ volumes:
   nacos-logs:
   mysql-data:
   consul-data:
+  redis-data:

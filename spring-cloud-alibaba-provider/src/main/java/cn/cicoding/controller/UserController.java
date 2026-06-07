@@ -1,7 +1,9 @@
 package cn.cicoding.controller;
 
+import cn.cicoding.controller.fallback.UserControllerFallback;
 import cn.cicoding.model.UserDomain;
 import cn.cicoding.service.UserService;
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -51,6 +53,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
+    @SentinelResource(value = "findById", fallbackClass = UserControllerFallback.class, fallback = "findByIdFallback", blockHandlerClass = UserControllerFallback.class, blockHandler = "findByIdBlockHandler")
     public UserDomain findById(@PathVariable Integer id) {
         return userService.findById(id);
     }

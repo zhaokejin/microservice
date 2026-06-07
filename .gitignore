@@ -39,3 +39,6 @@ build/
 
 # SkyWalking agent (downloaded by skywalking/download-agent.*)
 skywalking/agent/
+
+# Sentinel Dashboard JAR (downloaded by docker/sentinel/download.sh)
+docker/sentinel/sentinel-dashboard.jar
