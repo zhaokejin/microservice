@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 9010
 
 spring:
   application:
@@ -10,6 +10,17 @@ spring:
         server-addr: 127.0.0.1:8848
         username: nacos
         password: nacos
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8858
+        port: 8720
+      # 启用 Feign 对 Sentinel 的支持
+      eager: true
+
+# Feign 开启 Sentinel 熔断支持
+feign:
+  sentinel:
+    enabled: true
 
 management:
   endpoints:
