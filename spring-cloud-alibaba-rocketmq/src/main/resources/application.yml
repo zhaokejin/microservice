@@ -1,0 +1,51 @@
+server:
+  port: 9100
+
+spring:
+  application:
+    name: spring-cloud-alibaba-rocketmq
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        username: nacos
+        password: nacos
+    rocketmq:
+      # NameServer 地址（开发环境）
+      name-server: 127.0.0.1:9876
+      # 全局 Producer 配置
+      producer:
+        group: rocketmq-producer-group
+        send-message-timeout: 10000
+        retry-times-when-send-failed: 3
+        retry-times-when-send-async-failed: 3
+        max-message-size: 4194304
+        compress-message-body-threshold: 4096
+      # 全局 Consumer 配置
+      consumer:
+        group: rocketmq-consumer-group
+
+# 业务自定义 RocketMQ Topic
+rocketmq:
+  topic:
+    user-notify: sca-user-notify-topic
+    order-event: sca-order-event-topic
+  tag:
+    welcome: welcome
+    order-created: orderCreated
+    order-paid: orderPaid
+
+logging:
+  level:
+    root: info
+    cn.cicoding: debug
+    org.apache.rocketmq: warn
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
